@@ -1,0 +1,14 @@
+Package: ezanalysis
+Title: Guided analytics of different forms of data for non-statisticians
+Version: 0.0.0.1
+Authors@R: 
+    person(given = "Rohit",
+           family = "Gangupantulu",
+           role = c("aut", "cre"),
+           email = "first.last@example.com",
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: Ezanalysis aims to allow people to put in datasets of their choice, and then analyzes data for them based on the statistical questions they are looking to answer. It does this in a guided manner.
+License: MIT Public License
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.1.1
