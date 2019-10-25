@@ -1,26 +1,12 @@
-#' Determine the type of data and read it in
+#' Return dataframe from data file.
 #'
-#' This function allows you to read in the data needed, and automatically detects file type. Returns a dataframe.
-#' @param file Filename (regardless of type)
-#' @keywords file
-#' @export
+#' @param file A file, of any type.
+#' @return  A dataframe of your data file.
 #' @examples
-#' read_file()
-
-install.packages(c('readxl', 'rjson', 'XML', 'foreign'))
-library(readxl)
-library(rjson)
-library(XML)
-library(foreign)
-
-
-getExtension <- function(file){
-   ex <- strsplit(basename(file), split="\\.")[[1]]
-   return(ex[-1])
-}
-
-
+#' read_file('cool.sas7bdat')
+#' read_file('data.csv')
 read_file <- function(file){
+   source('getExtension.R')
    if (getExtension(file) == "csv") {
       df = read.csv(file)
    }
